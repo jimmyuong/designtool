@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href="list") list
+  div
+    each image in images
+
+      img(src='../statics/'+image.suffix + '/' + image.name,width="256px")
+
+      p Name: #{image.name}
+
+      p Download: 
+
+        a(href='../statics/'+ image.name) 下载
+
+      p Size: #{image.size}
+
+      p Dimensions: #{image.dimensions}
+
+      p ----------------------------------------------------------------
+
